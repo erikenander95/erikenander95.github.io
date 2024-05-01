@@ -10,25 +10,30 @@ html {
 
 /* Container and layout */
 .container {
-  display: grid;
-  grid-template-columns: 15% 85%;
+  display: flex; /* Change display property to flex */
+  flex-direction: column; /* Set flex direction to column */
   height: 100vh;
+  overflow-x: hidden; /* Ensure horizontal overflow is hidden */
 }
 
 /* Navbar styles */
 .navbar {
-  background-color: #0e1924;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 20px); /* Adjust width to accommodate scrollbar */
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
   padding: 20px;
-  padding-top: 250px; /* Adjust this value to move the navbar items up or down */
-  text-align: center;
-  position: relative;
+  z-index: 1000; /* Ensure the navbar is above other content */
+  display: flex;
+  justify-content: space-between; /* Aligns items at the beginning and end of the flex container */
+  align-items: center; /* Aligns items vertically */
 }
 
 .navbar h1 {
-  font-size: 36px;
-  color: #ffffff;
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: 0;
+  font-size: 24px;
+  color: #ffffff; /* White text color */
 }
 
 .navbar ul {
@@ -38,49 +43,27 @@ html {
 }
 
 .navbar li {
-  padding: 15px;
-  text-align: center;
-  position: relative;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .navbar a {
-  color: #ffffff;
+  color: #ffffff; /* White text color */
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #00b894;
+  color: #00b894; /* Hover color */
 }
 
-/* Icon size */
 .navbar i {
   font-size: 24px;
   margin-right: 10px;
 }
 
-/* Bar between navbar items */
-.navbar li:not(:last-child)::after,
-.navbar li:last-child::before {
-  content: "";
-  position: absolute;
-  bottom: 5px;
-  left: 15%;
-  right: 15%;
-  width: 70%;
-  height: 4px;
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    #ffffff 50%,
-    transparent 100%
-  );
-}
-
-.navbar li:last-child::before {
-  bottom: -10px;
-}
+/* Other styles remain the same */
 
 /* Main content styles */
 .main-content {
@@ -90,19 +73,85 @@ html {
 }
 
 .section {
-  padding: 200px;
-  margin-bottom: 20px;
-  background-color: #798aa3;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Let sections grow to fill available space */
+  padding: 50px; /* Adjust padding as needed */
+  margin-bottom: 40px; /* Adjust margin between sections */
+  background-color: #ffffff; /* Example background color */
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Example box shadow */
 }
 
-/* Text color for sections and headlines */
-.section h2,
+.section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333333; /* Example text color */
+}
+
 .section p {
-  color: #ffffff; /* Adjust to your desired color */
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555; /* Example text color */
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.hero {
+  position: relative; /* Ensure the container is positioned relatively */
+  background-color: #f5f5f5; /* Example background color */
+  background-image: url("../images/skyscrapers.jpg"); /* Updated background image path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: #333333; /* Example text color */
+  position: relative; /* Ensure the content is positioned relatively */
+  z-index: 1; /* Ensure the content appears above the background */
+}
+
+.hero-content-container {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.889
+  ); /* Semi-transparent white background */
+  padding: 60px;
+  border-radius: 8px;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.hero-content h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00b894; /* Example button color */
+  color: #ffffff; /* Example button text color */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+  background-color: #00796b; /* Example button hover color */
 }
