@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const targetId = link.getAttribute("href").substring(1);
 
-      // Check if the target id is not empty (not the Home button)
       if (targetId !== "") {
         const targetElement = document.getElementById(targetId);
 
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
           behavior: "smooth",
         });
       } else {
-        // Scroll to the top of the page for the Home button
         window.scrollTo({
           top: 0,
           behavior: "smooth",

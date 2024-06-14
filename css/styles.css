@@ -1,16 +1,15 @@
-/* Reset and base styles */
 body,
 html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #ffffff; /* Light background by default */
-  color: #333333; /* Default text color */
+  background-color: #ffffff;
+  color: #333333;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0)),
-    url("../images/skyscrapers.jpg"); /* Black gradient overlay */
-  background-size: cover; /* Cover the entire viewport */
-  background-repeat: no-repeat; /* Prevent image from repeating */
-  background-position: center; /* Center the background */
+    url("../images/skyscrapers.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: relative;
 }
 
@@ -25,33 +24,31 @@ body::before {
   z-index: -1;
 }
 
-/* Container and layout */
 .container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: transparent; /* Set the background color to transparent */
+  background-color: transparent;
 }
 
-/* Navbar styles */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100% - 20px); /* Adjust width to accommodate scrollbar */
-  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  width: calc(100% - 20px);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  z-index: 1000; /* Ensure the navbar is above other content */
+  z-index: 1000;
   display: flex;
-  justify-content: space-between; /* Aligns items at the beginning and end of the flex container */
-  align-items: center; /* Aligns items vertically */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar h1 {
   margin: 0;
   font-size: 24px;
-  color: #ffffff; /* White text color */
+  color: #ffffff;
 }
 
 .navbar ul {
@@ -66,14 +63,14 @@ body::before {
 }
 
 .navbar a {
-  color: #ffffff; /* White text color */
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #00b894; /* Hover color */
+  color: #00b894;
 }
 
 .navbar i {
@@ -81,13 +78,11 @@ body::before {
   margin-right: 10px;
 }
 
-/* Main content styles */
 .main-content {
   overflow-y: auto;
   padding: 20px;
 }
 
-/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
@@ -97,12 +92,12 @@ body::before {
 }
 
 .hero-content {
-  color: #ffffff; /* Change text color to white */
-  z-index: 1; /* Ensure the content appears above the background */
+  color: #ffffff;
+  z-index: 1;
 }
 
 .hero-content-container {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 60px;
   border-radius: 8px;
 }
@@ -125,22 +120,21 @@ body::before {
 .hero-content .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #00b894; /* Example button color */
-  color: #ffffff; /* Example button text color */
+  background-color: #00b894;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .hero-content .btn:hover {
-  background-color: #00796b; /* Example button hover color */
+  background-color: #00796b;
 }
 
-/* About Me section */
 .about-me {
   display: flex;
   flex: 1 1 0px;
-  flex-direction: row; /* Display items in a row */
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
@@ -149,30 +143,29 @@ body::before {
 
 .about-me-container {
   display: flex;
-  flex-direction: row; /* Items side by side */
+  flex-direction: row;
   align-items: center;
-  max-width: 1500px; /* Adjust the maximum width as needed */
-  margin: 0 auto; /* Center the container horizontally */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  padding: 40px; /* Adjust padding as needed */
+  max-width: 1500px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
   border-radius: 8px;
 }
 
 .about-me-photo {
-  flex: 1; /* Take up 1 part of the available space */
-  margin-right: 20px; /* Space between photo and text */
+  flex: 1;
+  margin-right: 20px;
 }
 
 .about-me-content {
-  flex: 2; /* Take up 2 parts of the available space */
-  text-align: left; /* Align text to the left */
+  flex: 2;
+  text-align: left;
 }
 
-/* Projects section */
 .projects {
   display: flex;
   flex: 1 1 0px;
-  flex-direction: row-reverse; /* Reverse order: image on the right, text on the left */
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
@@ -183,10 +176,10 @@ body::before {
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: 1500px; /* Adjust the maximum width as needed */
-  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1500px;
+  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px; /* Adjust padding as needed */
+  padding: 40px;
   border-radius: 8px;
 }
 
@@ -200,7 +193,6 @@ body::before {
   text-align: left;
 }
 
-/* Contact section (same as About Me) */
 .contact {
   display: flex;
   flex: 1 1 0px;
@@ -215,10 +207,10 @@ body::before {
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: 1500px; /* Adjust the maximum width as needed */
-  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1500px;
+  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 40px; /* Adjust padding as needed */
+  padding: 40px;
   border-radius: 8px;
 }
 
@@ -235,34 +227,34 @@ body::before {
 .about-me-photo img,
 .projects-photo img,
 .contact-photo img {
-  width: 100%; /* Adjust width as needed */
+  width: 100%;
   flex: 1;
   margin-right: 20px;
-  max-width: 400px; /* Example maximum width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Example border radius */
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
 }
 
 .about-me-content,
 .projects-content,
 .contact-content {
-  font-family: "Arial", sans-serif; /* Example font family */
-  font-size: 16px; /* Example font size */
-  font-weight: normal; /* Example font weight */
-  line-height: 1.6; /* Example line height */
-  color: #ffffff; /* Text color */
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #ffffff;
 }
 
 .about-me-content h2,
 .projects-content h2,
 .contact-content h2 {
-  color: #ffffff; /* Heading color */
+  color: #ffffff;
 }
 
 .about-me-content p,
 .projects-content p,
 .contact-content p {
-  color: #ffffff; /* Paragraph text color */
+  color: #ffffff;
 }
 
 .about-me-container,
@@ -274,5 +266,5 @@ body::before {
   padding: 40px;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 8px;
-  text-align: center; /* Adjust text alignment as needed */
+  text-align: center;
 }
