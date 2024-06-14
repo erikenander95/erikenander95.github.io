@@ -158,18 +158,19 @@ html {
   background-color: #00796b; /* Example button hover color */
 }
 
+/* About Me section */
 .about-me {
-  padding: 50px 20px;
   display: flex;
+  flex-direction: row; /* Display items in a row */
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .about-me-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Items side by side */
   align-items: center;
   max-width: 800px;
   margin: 0 auto;
@@ -178,45 +179,83 @@ html {
   border-radius: 8px;
 }
 
-.about-me-photo img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin-bottom: 20px;
+.about-me-photo {
+  flex: 1; /* Take up 1 part of the available space */
+  margin-right: 20px; /* Space between photo and text */
 }
 
 .about-me-content {
-  margin-top: 20px;
+  flex: 2; /* Take up 2 parts of the available space */
+  text-align: left; /* Align text to the left */
 }
 
-.about-me h2 {
-  font-size: 28px;
-  color: #333333;
-}
-
-.about-me p {
-  font-size: 16px;
-  color: #555555;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.about-me-links {
+/* Projects section */
+.projects {
   display: flex;
-  gap: 10px;
+  flex-direction: row-reverse; /* Reverse order: image on the right, text on the left */
   justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
 }
 
-.about-me-links .btn {
-  padding: 10px 20px;
-  background-color: #00b894;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 8px;
 }
 
-.about-me-links .btn:hover {
-  background-color: #00796b;
+.projects-photo {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.projects-content {
+  flex: 2;
+  text-align: left;
+}
+
+/* Contact section (same as About Me) */
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.contact-photo {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.contact-content {
+  flex: 2;
+  text-align: left;
+}
+
+.about-me-photo img,
+.projects-photo img,
+.contact-photo img {
+  width: 100%; /* Adjust width as needed */
+  max-width: 400px; /* Example maximum width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Example border radius */
 }
