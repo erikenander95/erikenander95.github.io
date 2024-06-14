@@ -27,10 +27,11 @@ body::before {
 
 /* Container and layout */
 .container {
-  display: flex; /* Change display property to flex */
-  flex-direction: column; /* Set flex direction to column */
-  min-height: 100vh; /* Ensure container at least fills the viewport height */
-  overflow-x: hidden; /* Ensure horizontal overflow is hidden */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: transparent; /* Set the background color to transparent */
 }
 
 /* Navbar styles */
@@ -86,30 +87,7 @@ body::before {
   padding: 20px;
 }
 
-.section {
-  padding: 50px; /* Adjust padding as needed */
-  margin-bottom: 40px; /* Adjust margin between sections */
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Example box shadow */
-}
-
-.section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333333; /* Example text color */
-}
-
-.section p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555555; /* Example text color */
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
@@ -161,6 +139,7 @@ html {
 /* About Me section */
 .about-me {
   display: flex;
+  flex: 1 1 0px;
   flex-direction: row; /* Display items in a row */
   justify-content: center;
   align-items: center;
@@ -172,10 +151,10 @@ html {
   display: flex;
   flex-direction: row; /* Items side by side */
   align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-  padding: 40px;
+  max-width: 1500px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 40px; /* Adjust padding as needed */
   border-radius: 8px;
 }
 
@@ -192,6 +171,7 @@ html {
 /* Projects section */
 .projects {
   display: flex;
+  flex: 1 1 0px;
   flex-direction: row-reverse; /* Reverse order: image on the right, text on the left */
   justify-content: center;
   align-items: center;
@@ -203,10 +183,10 @@ html {
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 40px;
+  max-width: 1500px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px; /* Adjust padding as needed */
   border-radius: 8px;
 }
 
@@ -223,6 +203,7 @@ html {
 /* Contact section (same as About Me) */
 .contact {
   display: flex;
+  flex: 1 1 0px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -234,10 +215,10 @@ html {
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 40px;
+  max-width: 1500px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px; /* Adjust padding as needed */
   border-radius: 8px;
 }
 
@@ -255,7 +236,43 @@ html {
 .projects-photo img,
 .contact-photo img {
   width: 100%; /* Adjust width as needed */
+  flex: 1;
+  margin-right: 20px;
   max-width: 400px; /* Example maximum width */
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Example border radius */
+}
+
+.about-me-content,
+.projects-content,
+.contact-content {
+  font-family: "Arial", sans-serif; /* Example font family */
+  font-size: 16px; /* Example font size */
+  font-weight: normal; /* Example font weight */
+  line-height: 1.6; /* Example line height */
+  color: #ffffff; /* Text color */
+}
+
+.about-me-content h2,
+.projects-content h2,
+.contact-content h2 {
+  color: #ffffff; /* Heading color */
+}
+
+.about-me-content p,
+.projects-content p,
+.contact-content p {
+  color: #ffffff; /* Paragraph text color */
+}
+
+.about-me-container,
+.projects-container,
+.contact-container {
+  flex: 1 1 0px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  text-align: center; /* Adjust text alignment as needed */
 }
