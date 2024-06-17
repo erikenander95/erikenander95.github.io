@@ -133,7 +133,6 @@ body::before {
 
 .about-me {
   display: flex;
-  flex: 1 1 0px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -160,6 +159,69 @@ body::before {
 .about-me-content {
   flex: 2;
   text-align: left;
+}
+
+.about-me-photo img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-me-content h2 {
+  color: #ffffff;
+}
+
+.about-me-content p {
+  color: #ffffff;
+}
+
+.about-me-skills {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.about-me-skills h3 {
+  color: #00b894;
+  margin-bottom: 10px;
+}
+
+.about-me-skills ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensure the columns are spaced evenly */
+  max-width: 400px; /* Adjust the maximum width as needed */
+}
+
+.about-me-skills li {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 5px 0;
+  flex: 1 1 40%; /* Each item takes 48% of the width, with 4% gap between columns */
+  display: flex;
+  align-items: center;
+}
+
+.about-me-skills li i {
+  margin-right: 10px;
+}
+
+.about-me-links .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00b894;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.about-me-links .btn:hover {
+  background-color: #00796b;
 }
 
 .projects {
