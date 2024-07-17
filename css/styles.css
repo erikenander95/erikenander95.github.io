@@ -127,6 +127,11 @@ body::before {
   border-radius: 5px;
   transition: background-color 0.3s ease;
   font-size: 24px;
+  color: #ffffff;
+}
+
+.hero-content .btn i {
+  color: #ffffff;
 }
 
 .hero-content .btn:hover {
@@ -274,14 +279,14 @@ body::before {
 }
 
 .contact-icon {
-  font-size: 24px;
+  font-size: 40px;
   margin-right: 10px;
-  color: #333; /* Adjust icon color as needed */
+  color: #333;
   transition: color 0.3s ease;
 }
 
 .contact-icon:hover {
-  color: #00b894; /* Change color on hover */
+  color: #00b894;
 }
 
 .contact-photo {
