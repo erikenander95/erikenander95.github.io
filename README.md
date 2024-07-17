@@ -12,7 +12,7 @@ https://erikenander95.github.io/
 - [Usage](#usage)
 
 ## About
-This project is a personal portfolio website built to display my skills, projects, and provide a way for potential employers or collaborators to contact me. The site features a clean, minimalist design with smooth scrolling and responsive layout to ensure it looks great on all devices.
+This project is a personal portfolio website built to display my skills, projects, and provide a way for potential employers or collaborators to contact me. The site features a clean, minimalist design with smooth scrolling.
 
 ## Technologies Used
 - HTML
