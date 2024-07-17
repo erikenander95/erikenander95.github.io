@@ -104,12 +104,14 @@ body::before {
 
 .hero-content h1 {
   font-size: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
 }
 
 .hero-content h2 {
-  font-size: 30px;
+  font-size: 40px;
   margin-bottom: 20px;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
 }
 
 .hero-content p {
@@ -121,14 +123,18 @@ body::before {
   display: inline-block;
   padding: 10px 20px;
   background-color: #00b894;
-  color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  font-size: 24px;
 }
 
 .hero-content .btn:hover {
   background-color: #00796b;
+}
+
+.hero-content .btn i {
+  margin: 0;
 }
 
 .about-me {
@@ -174,11 +180,13 @@ body::before {
 
 .about-me-content p {
   color: #ffffff;
+  font-size: 20px;
 }
 
 .about-me-skills {
   padding: 20px;
   margin: 20px 0;
+  font-size: 22px;
 }
 
 .about-me-skills h3 {
@@ -192,36 +200,21 @@ body::before {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Ensure the columns are spaced evenly */
-  max-width: 400px; /* Adjust the maximum width as needed */
+  justify-content: space-between;
+  max-width: 400px;
 }
 
 .about-me-skills li {
   color: #ffffff;
   font-size: 16px;
   margin: 5px 0;
-  flex: 1 1 40%; /* Each item takes 48% of the width, with 4% gap between columns */
+  flex: 1 1 40%;
   display: flex;
   align-items: center;
 }
 
 .about-me-skills li i {
   margin-right: 10px;
-}
-
-.about-me-links .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #00b894;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-right: 10px;
-  transition: background-color 0.3s ease;
-}
-
-.about-me-links .btn:hover {
-  background-color: #00796b;
 }
 
 .projects {
@@ -274,6 +267,21 @@ body::before {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 40px;
   border-radius: 8px;
+}
+
+.contact-icons {
+  margin-top: 20px;
+}
+
+.contact-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #333; /* Adjust icon color as needed */
+  transition: color 0.3s ease;
+}
+
+.contact-icon:hover {
+  color: #00b894; /* Change color on hover */
 }
 
 .contact-photo {
