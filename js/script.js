@@ -32,4 +32,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const targetId = arrowButton.getAttribute("href").substring(1);
     scrollToTarget(targetId);
   });
+
+  const tablinks = document.querySelectorAll(".tablinks");
+  const tabcontents = document.querySelectorAll(".tabcontent");
+
+  function openProject(evt, projectName) {
+    tabcontents.forEach((tabcontent) => {
+      tabcontent.style.display = "none";
+    });
+
+    tablinks.forEach((tablink) => {
+      tablink.className = tablink.className.replace(" active", "");
+    });
+
+    document.getElementById(projectName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  if (tablinks.length > 0) {
+    tablinks[0].click();
+  }
+
+  tablinks.forEach((tablink) => {
+    tablink.addEventListener("click", (e) => {
+      const projectName = tablink.getAttribute("onclick").split("'")[1];
+      openProject(e, projectName);
+    });
+  });
 });

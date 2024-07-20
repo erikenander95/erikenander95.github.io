@@ -234,8 +234,7 @@ body::before {
 
 .projects-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   max-width: 1500px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.5);
@@ -244,13 +243,74 @@ body::before {
 }
 
 .projects-photo {
-  flex: 1;
+  flex: 3;
   margin-left: 20px;
 }
 
 .projects-content {
-  flex: 2;
+  flex: 7;
   text-align: left;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.tabs button {
+  background-color: inherit;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 20px;
+  transition: 0.3s;
+  color: white;
+  font-size: 18px;
+  position: relative;
+}
+
+.tabs button:hover {
+  background-color: #00796b;
+}
+
+.tabs button.active {
+  background-color: #00b894;
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 1;
+  transform: translateY(-10px);
+}
+
+.tabcontent {
+  display: none;
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tablinks {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tablinks:hover {
+  background-color: #555;
+}
+
+.tablinks.active {
+  background-color: #00b894;
 }
 
 .contact {

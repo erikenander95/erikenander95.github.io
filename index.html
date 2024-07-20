@@ -87,12 +87,38 @@
         <section id="projects" class="projects section">
           <div class="projects-container">
             <div class="projects-content">
-              <h2>Project 1</h2>
-              <p>TBA!</p>
-              <h2>Project 2</h2>
-              <p>TBA!</p>
-              <h2>Project 3</h2>
-              <p>TBA!</p>
+              <div class="tabs">
+                <button
+                  class="tablinks active"
+                  onclick="openProject(event, 'Project1')"
+                >
+                  Project 1
+                </button>
+                <button
+                  class="tablinks"
+                  onclick="openProject(event, 'Project2')"
+                >
+                  Project 2
+                </button>
+                <button
+                  class="tablinks"
+                  onclick="openProject(event, 'Project3')"
+                >
+                  Project 3
+                </button>
+              </div>
+              <div id="Project1" class="tabcontent" style="display: block">
+                <h2>Project 1</h2>
+                <p>Description for Project 1.</p>
+              </div>
+              <div id="Project2" class="tabcontent">
+                <h2>Project 2</h2>
+                <p>Description for Project 2.</p>
+              </div>
+              <div id="Project3" class="tabcontent">
+                <h2>Project 3</h2>
+                <p>Description for Project 3.</p>
+              </div>
             </div>
             <div class="projects-photo">
               <img src="images/projects.jpg" alt="Projects" />
