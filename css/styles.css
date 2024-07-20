@@ -254,8 +254,6 @@ body::before {
 
 .tabs {
   display: flex;
-  margin-bottom: 20px;
-  position: relative;
 }
 
 .tabs button {
