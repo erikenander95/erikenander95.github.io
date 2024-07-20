@@ -339,12 +339,12 @@ body::before {
 .contact-icon {
   font-size: 40px;
   margin-right: 10px;
-  color: #333;
+  color: #00b894;
   transition: color 0.3s ease;
 }
 
 .contact-icon:hover {
-  color: #00b894;
+  color: #00796b;
 }
 
 .contact-photo {
@@ -381,12 +381,20 @@ body::before {
 .about-me-content h2,
 .projects-content h2,
 .contact-content h2 {
+  font-family: "Arial", sans-serif;
+  font-size: 35px;
+  font-weight: normal;
+  line-height: 1.6;
   color: #ffffff;
 }
 
 .about-me-content p,
 .projects-content p,
 .contact-content p {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.6;
   color: #ffffff;
 }
 
