@@ -16,20 +16,18 @@ I’m a full-stack developer based in Sweden, passionate about crafting **elegan
 
 ## 📂 Project Structure
 
-src/ # React components and pages
-├─ Hero.tsx # Landing / introduction section
-├─ About.tsx # About me
-├─ Projects.tsx # Featured projects
-├─ Skills.tsx # Skills & technologies
-├─ Contact.tsx # Contact form & info
-├─ Footer.tsx # Site footer
-public/ # Static assets
-docs/ # Built site deployed to GitHub Pages
-vite.config.ts # Vite config
-package.json # Dependencies & scripts
+src/
+Hero.tsx // Landing / introduction section
+About.tsx // About me
+Projects.tsx // Featured projects
+Skills.tsx // Skills & technologies
+Contact.tsx // Contact form & info
+Footer.tsx // Site footer
 
-markdown
-Copy code
+public/ // Static assets
+docs/ // Built site deployed to GitHub Pages
+vite.config.ts // Vite configuration
+package.json // Dependencies & scripts
 
 ## 🚀 Scripts
 
