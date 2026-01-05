@@ -1,8 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: "/erikenander95.github.io/", // Viktigt för GitHub Pages
+  base: "/erikenander95.github.io/",
   plugins: [react()],
+  build: {
+    outDir: "docs", // <-- bygg till docs istället för dist
+  },
 });
