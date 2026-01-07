@@ -1,6 +1,46 @@
 import { Mail, MapPin, Github, Linkedin } from "lucide-react";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export function Contact() {
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    const templateParams = {
+      user_name: name,
+      user_email: email,
+      user_message: message,
+    };
+
+    emailjs
+      .send(serviceID, templateID, templateParams, publicKey)
+      .then((response) => {
+        console.log("Email sent successfully!", response.status, response.text);
+        // Clear form after sent email
+        setName("");
+        setEmail("");
+        setMessage("");
+        alert("Message sent! Thank you.");
+      })
+      .catch((error) => {
+        console.error("Failed to send email:", error);
+        alert("Oops! Something went wrong.");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
   return (
     <section id="contact" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
@@ -152,7 +192,7 @@ export function Contact() {
               Send a Message
             </h3>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="name"
@@ -170,6 +210,8 @@ export function Contact() {
                     border: "1px solid #2A2A30",
                     color: "#FFFFFF",
                   }}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Your name"
                 />
               </div>
@@ -191,6 +233,8 @@ export function Contact() {
                     border: "1px solid #2A2A30",
                     color: "#FFFFFF",
                   }}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="your@email.com"
                 />
               </div>
@@ -212,29 +256,34 @@ export function Contact() {
                     border: "1px solid #2A2A30",
                     color: "#FFFFFF",
                   }}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   placeholder="Your message..."
                 />
               </div>
 
               <button
                 type="submit"
+                disabled={loading} // disable while sending
                 className="w-full py-3 rounded-lg transition-all hover:scale-[1.02]"
                 style={{
                   backgroundColor: "#8B6DDE",
                   color: "#FFFFFF",
                   fontWeight: "600",
                   boxShadow: "0 0 0 rgba(111, 85, 201, 0)",
+                  cursor: loading ? "not-allowed" : "pointer", // show not-allowed cursor when disabled
                 }}
-                onMouseEnter={(e) =>
-                  (e.currentTarget.style.boxShadow =
-                    "0 0 30px rgba(111, 85, 201, 0.6)")
-                }
-                onMouseLeave={(e) =>
-                  (e.currentTarget.style.boxShadow =
-                    "0 0 0 rgba(111, 85, 201, 0)")
-                }
+                onMouseEnter={(e) => {
+                  if (!loading)
+                    e.currentTarget.style.boxShadow =
+                      "0 0 30px rgba(111, 85, 201, 0.6)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow =
+                    "0 0 0 rgba(111, 85, 201, 0)";
+                }}
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
